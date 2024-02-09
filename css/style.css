@@ -1,0 +1,32 @@
+body {
+  max-width: 960px;
+  border: solid 1px #000;
+  margin: auto;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  border: 1px solid #000;
+  height: 120px;
+  margin: 20px;
+  text-align: center;
+  line-height: 120px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* 画面幅960以上 */
+@media (min-width: 960px) {
+  li:nth-child(-n + 2) {
+    width: calc(960px / 2 - calc(20px * 2));
+  }
+  li:nth-last-child(-n + 3) {
+    width: calc(960px / 3 - calc(20px * 2));
+  }
+}
